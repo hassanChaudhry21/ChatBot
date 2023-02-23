@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+ body { 
+   font-family: Arial, sans-serif; 
+   background-image: url('fishBackground.webp'); 
+ }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#chat-bot {
+  height: 500px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+
+
+.message {
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.message.user {
+  background-color: #c1e2ff;
+  color: #333;
+}
+
+.message.bot {
+  background-color: #e7e7e7;
+  color: #555;
+}
+
+
+.message:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#chat-input {
+  width: calc(100% - 110px);
+  height: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#chat-submit {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #59b862;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+
+#chat-submit:hover {
+  background-color: #4ca050;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#chat-submit:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+.welcome-message {
+  text-align: center;
+  padding: 5px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: swim  2s ;
+}
+
+.welcome-message h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} 
