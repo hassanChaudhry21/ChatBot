@@ -5,13 +5,12 @@ const chatForm = document.getElementById('chat-form');
 const chatSubmit = document.getElementById('chat-submit');
 
 
-// Add event listener to the form for handling user input
 chatForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const userInput = chatInput.value;
 
   chatInput.value = '';
-  // Add user message to the chat log
+
   addMessage(userInput, 'user');
   generateResponse(userInput);
 });
@@ -27,7 +26,7 @@ chatSubmit.addEventListener('click', (event) => {
   generateResponse(userInput);
 });
 
-// Function to add messages to the chat log
+
 function addMessage(message, sender) {
   // Create a new message element
   const messageElement = document.createElement('div');
@@ -35,8 +34,8 @@ function addMessage(message, sender) {
   messageElement.classList.add(sender);
   messageElement.textContent = message;
   // Add the new message to the chat log
+  
   chatLog.appendChild(messageElement);
-  // Scroll to the bottom of the chat log
   chatLog.scrollTop = chatLog.scrollHeight;
 }
 
