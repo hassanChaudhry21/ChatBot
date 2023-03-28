@@ -1,7 +1,11 @@
 const chatBot = document.getElementById('chat-bot');
+
 const chatLog = document.getElementById('chat-log');
+
 const chatInput = document.getElementById('chat-input');
+
 const chatForm = document.getElementById('chat-form');
+
 const chatSubmit = document.getElementById('chat-submit');
 
 
@@ -25,8 +29,6 @@ chatSubmit.addEventListener('click', (event) => {
   addMessage(userInput, 'user');
   generateResponse(userInput);
 });
-
-
 function addMessage(message, sender) {
   // Create a new message element
   const messageElement = document.createElement('div');
